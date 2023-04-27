@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background-color: cadetblue;
+  color: brown;
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form-container input {
+  height: 50px;
+  width: 500px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+#signup-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+}
