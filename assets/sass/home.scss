@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
+    // align-items: center;
+
+    #nav-bar {
+        width: 100%;
+        
+    }
+
+    #post-list-container{
+        li{
+            list-style: none;
+            // color: red;
+        }
+
+        small{
+            color: red;
+        }
+    }
+}

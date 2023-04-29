@@ -1,0 +1,11 @@
+body {
+  height: 100%;
+}
+
+body #footer-bar {
+  display: flex;
+  height: 50px;
+  background-color: blue;
+  align-items: center;
+  justify-content: center;
+}
