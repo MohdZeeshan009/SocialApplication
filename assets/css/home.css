@@ -1,12 +1,17 @@
 body {
   margin: 0;
   background-color: yellow;
+  height: 100%;
   width: 100%;
   text-align: center;
 }
 
 body #nav-bar {
   width: 100%;
+}
+
+body #post-list-container {
+  display: inline-block;
 }
 
 body #post-list-container li {
