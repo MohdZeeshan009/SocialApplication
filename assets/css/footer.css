@@ -1,11 +1,17 @@
 body {
-  height: 100%;
-}
-
-body #footer-bar {
-  display: flex;
-  height: 50px;
-  background-color: blue;
-  align-items: center;
-  justify-content: center;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  body #layout-footer {
+    display: flex;
+    height: 50px;
+    background-color: #eb840f;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px; }
+  body .footer-nav ul {
+    display: flex;
+    list-style: none; }
+    body .footer-nav ul p {
+      list-style: none;
+      margin-left: 20px; }

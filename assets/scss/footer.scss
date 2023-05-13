@@ -1,0 +1,32 @@
+body {
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    #layout-footer {
+        display: flex;
+        height: 50px;
+        background-color: rgb(235, 132, 15);
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 15px;
+        // padding-left: 15px;
+        // margin: 5px;
+    }
+
+    .footer-nav ul {
+        display: flex;
+        list-style: none;
+
+            p {
+                list-style: none;
+                margin-left: 20px;
+            }
+
+        
+    }
+
+
+}

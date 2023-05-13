@@ -1,38 +1,47 @@
-
-const post = require('../models/post');
-module.exports.home = function (req, res) {
-
-    // post.find({}, function(err, posts){
-    //     if(err){
-    //         console.log('Error in showing post'); return};
-
-    //         return res.render('home', {
-    //             title: 'Codeial | Home',
-    //             posts: posts
-    //         })
-    // })
+const Post = require('../models/post');
+const User = require('../models/user');
 
 
-    // Populate data 
-    post.find({})
+
+module.exports.home = async function(req, res){
+
+    try{
+        // CHANGE :: populate the likes of each post and comment
+        let posts = await Post.find({})
+        .sort('-createdAt')
         .populate('user')
         .populate({
             path: 'comments',
-            populate:{
-                path: 'user',
+            populate: {
+                path: 'user'
             },
-        })
-        .exec(function (err, posts) {
-            if (err) {
-                console.log('Error in showing user post');
+            populate: {
+                path: 'likes'
             }
+        }).populate('likes');
 
-            return res.render('home', {
-                title: 'Home | Codieal',
-                posts: posts,
-            });
+    
+        let users = await User.find({});
+
+        return res.render('home', {
+            title: "Codeial | Home",
+            posts:  posts,
+            all_users: users
         });
 
-
+    }catch(err){
+        console.log('Error', err);
+        return;
+    }
+   
 }
+
 // module.exports.actionName = function(req, res){}
+
+
+// using then
+// Post.find({}).populate('comments').then(function());
+
+// let posts = Post.find({}).populate('comments').exec();
+
+// posts.then()
